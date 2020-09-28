@@ -1,0 +1,26 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+button {
+    padding: 16px;
+    font-size: 16px;
+}
+
+.page {
+    display: none;
+}
+
+input:hover {
+    border-color: #000;
+}
+
+#start-err {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
