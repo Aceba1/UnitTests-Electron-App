@@ -9,15 +9,16 @@ const {dialog, app} = require('electron').remote;
 
 const path = require('path');
 
-
-
-const Pages = require('./src/renders/utils/pages');
-Pages.LinkPage('start', undefined, () => {});
-Pages.LinkPage('main');
-
-Pages.ShowPage('start');
-
-require('./src/renders/pages/startPage');
-require('./src/renders/pages/mainPage');
 // Add logic here to see if configuration was done
 // ... Also add file system utility 
+
+const Pages = require('./src/renders/utils/pages');
+
+console.log(JSON.stringify(Pages.knownPages));
+require('./src/renders/pages/startPage');
+require('./src/renders/pages/mainPage');
+
+
+console.log('Ran');
+
+Pages.ShowPage('start');
