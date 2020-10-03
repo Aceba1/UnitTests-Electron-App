@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Code Bean</title>
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -36,8 +36,13 @@
       <header>
         <h1>Main</h1>
       </header>
-      <p>You made it!</p>
-      <p></p>
+      <p id='main-log'></p>
+      <input id='main-token' placeholder="Token"/>
+      <input id='main-repo' placeholder="User/Repo"/>
+      <button id='main-getRateLimit'>getRateLimit</button>
+      <button id='main-getRelease'>getRelease</button>
+      <button id='main-getRepo'>getRepo</button>
+      <button id='main-getPage'>getPage</button>
     </div>
 
     <script src="./renderer.js"></script>

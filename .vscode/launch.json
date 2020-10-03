@@ -16,6 +16,11 @@
       },
       "args" : ["."],
       "outputCapture": "std"
+    }, {
+      "name": "Fast-Reload Debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "nodemon start"
     }
   ]
 }
