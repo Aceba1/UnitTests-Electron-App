@@ -23,14 +23,19 @@ function closePage() {
 }
 
 async function rateLimit(event) {
+  logText.innerHTML = JSON.stringify(await queryGithub.getRateLimit(), null, '  ');
 }
 async function release(event) {
+  logText.innerHTML = JSON.stringify(await queryGithub.getRelease(repoInput.value), null, '  ');
 }
 async function repo(event) {
+  logText.innerHTML = JSON.stringify(await queryGithub.getRepo(repoInput.value), null, '  ');
 }
 async function page(event) {
+  logText.innerHTML = JSON.stringify(await queryGithub.getPage(), null, '  ');
 }
 function updateToken(event) {
+  queryGithub.setToken(event.target.value);
 }
 
 // ---- Paging ----
