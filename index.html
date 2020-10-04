@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy"   content="default-src 'self' https://avatars0.githubusercontent.com https://api.github.com https://avatars1.githubusercontent.com https://avatars2.githubusercontent.com https://github.com https://foxrudor.de; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' https://avatars0.githubusercontent.com https://api.github.com https://avatars1.githubusercontent.com https://avatars2.githubusercontent.com https://github.com https://foxrudor.de; script-src 'self'">
     <title>Code Bean</title>
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
@@ -43,6 +43,9 @@
       <button id='main-getRelease'>getRelease</button>
       <button id='main-getRepo'>getRepo</button>
       <button id='main-getPage'>getPage</button>
+      <div id='main-modlist' class='modcard-list'>
+
+      </div>
       <p id='main-log' class='keepspace'></p>
     </div>
 

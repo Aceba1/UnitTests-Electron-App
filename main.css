@@ -7,6 +7,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+img {
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
 button {
     padding: 8px 12px;
     margin: 8px;
@@ -31,4 +36,172 @@ input:hover {
 #start-err {
     font-size: 0.8rem;
     opacity: 0.7;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    max-width: max-content;
+    min-width: 16px;
+    height: 18px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 0%;
+    margin-left: 0px;
+    opacity: 0%;
+    transition: opacity 0.2s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modcard {
+    width: 75%;
+    margin: 16px auto;
+    display: flex;
+    justify-content: space-between;
+    font-family:Tahoma; 
+    background:#fff; 
+    padding:4px;
+    border-radius: 6px;
+}
+
+.modcard:hover .modcard-body {
+    margin-top:16px;
+    height:36px;
+    transition: height 0.2s;
+    opacity: 100%;
+}
+
+.modcard:hover .modcard-detail-img {
+    margin-left:0px;
+    width:100px;
+    height:100px;
+}
+
+.modcard-header {
+    flex-basis: 100%;
+    flex-grow: 1;
+    display:inline-block; 
+    vertical-align:top;
+    margin-left:6px;
+}
+
+.modcard-body {
+    opacity: 0%;
+    height:0px;
+    margin:0px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    vertical-align:bottom;
+}
+
+.modcard-detail-img {
+    width:40px;
+    height:40px;
+    margin-left:60px;
+    border-radius:2px;
+    vertical-align:top;
+    transition: 0.2s;
+    position:relative;
+}
+
+.modcard-body button {
+    border-style: none;
+    background-color: #eee;
+    padding: 4px 8px;
+    margin: 0px;
+    border-radius: 6px;
+    max-height:100%;
+    margin: 8px 5% 0px 8px;
+    flex: 1 0 auto;
+    overflow: hidden;
+    line-height: 1.03rem;
+}
+.modcard-body button:hover {
+    background-color: #ddd;
+}
+.modcard-body button:active {
+    background-color: #ccc;
+}
+
+
+.modcard-body button.priority {
+    flex: 3 0 0;
+}
+
+.flexholder {
+    display:flex;
+}
+
+.flexitemstretch {
+    flex:1 1 0;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+.subtitle {
+    opacity:80%; 
+    font-size:0.9rem;
+    word-wrap: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.author {
+    margin:4px;
+    font-style:italic;
+    word-wrap: nowrap;
+    opacity:50%; 
+    font-size:0.9rem;
+}
+
+.profile-img-small {
+    width:40px;
+    height:40px;
+    border-radius:2px;
+    vertical-align:top;
+}
+
+.horizontal-fill {
+    display:flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    justify-content: stretch;
+    
+}
+
+.vertical-fill {
+    display:flex;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-flow: column;
+    justify-content: stretch;
 }

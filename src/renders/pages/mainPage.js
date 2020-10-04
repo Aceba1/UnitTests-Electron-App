@@ -1,10 +1,12 @@
 const { ipcRenderer, remote, remote: {shell, dialog, app} } = require('electron');
 
 //const eventSelectDirectory = require('../msg/selectDirectory');
-const queryGithub = require('../utils/queryGithub');
+const queryGithub = require('../utils/queryGithub')
+const createGithubList = require("../utils/modListManager");
 
 //const page = document.getElementById('main');
 const logText = document.getElementById('main-log');
+const modList = document.getElementById('main-modlist');
 const tokenInput = document.getElementById('main-token');
 const repoInput = document.getElementById('main-repo');
 const ratelimitButton = document.getElementById('main-getRateLimit');
@@ -32,7 +34,11 @@ async function repo(event) {
   logText.innerHTML = JSON.stringify(await queryGithub.getRepo(repoInput.value), null, '  ');
 }
 async function page(event) {
-  logText.innerHTML = JSON.stringify(await queryGithub.getPage(), null, '  ');
+  let list = await createGithubList();
+  if (modList.hasChildNodes())
+    modList.replaceChild(list, modList.firstChild);
+  else
+    modList.appendChild(list);
 }
 function updateToken(event) {
   queryGithub.setToken(event.target.value);
